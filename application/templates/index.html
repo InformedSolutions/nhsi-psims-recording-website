@@ -1,0 +1,91 @@
+{% extends 'nhsi_template.html' %}
+
+{% block page_title %}PSIMS Incident Recording{% endblock %}
+{% load static %}
+{% load govuk_template_base %}
+
+{% block inner_content %}
+
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+
+            <div class="form-group">
+                <h1 class="heading-xlarge">
+                    Record and Learn from Patient Safety Incidents
+                </h1>
+
+                <p class="lede">This online service will help you to gain access to records of patient safety incidents for the purposes of learning and safety improvement.</p>
+                <p>We'll use your information to create anonymised records of incidents that have occurred, which can be aggregated with other records nationally.</p>
+                <p>If you use an NHS Improvement account, you can return to access, and update, previously saved information.</p>
+            </div>
+
+            <div class="notice form-group">
+                <i class="icon icon-important">
+                    <span class="visually-hidden">Warning</span>
+                </i>
+                <strong class="bold-small">
+                    If your organisation has a Local Risk Management System, you should use that to record an incident, instead of this service.
+                </strong>
+            </div>
+
+            <div class="form-group">
+
+                <p>You can use this service to:</p>
+
+                <ul class="list list-bullet">
+                    <li>record a patient safety incident that you were involved in or saw</li>
+                    <li>obtain data about patient safety incidents nationally</li>
+                    <li>access data about patient safety in your local organisation or trust</li>
+                    <li>share learning and experience with other healthcare providers</li>
+                    <li>understand current patient safety alerts and publications</li>
+                </ul>
+            </div>
+
+            <div class="form-group" style="margin-top: 40px;">
+                <a href="{% url 'account' %}" class="button button-start">Start now</a>
+            </div>
+
+            <h2 class="heading-large">Before you start</h2>
+            <p>You will need information about the patient(s) involved, if you have access to it.</p>
+            <details>
+                <summary><span class="summary">Why should I record patient safety incidents?</span></summary>
+                <div class="panel panel-border-narrow">
+                    <p>
+                        By recording patient safety incidents all NHS-funded care providers can learn from incidents across the healthcare system.
+                    </p>
+                    <p>
+                        This service provides a method for people to record incidents such that they can be learnt from, without blame, in order to prevent similar incidents happening again.
+                    </p>
+                </div>
+            </details>
+            <details>
+                <summary><span class="summary">How do I know patient confidentiality will be protected?</span></summary>
+                <div class="panel panel-border-narrow">
+                    <p>
+                        This service asks for information about the patient, so that we can identify trends in incidents for patients with particular needs.
+                    </p>
+                    <p>
+                        However, no patient identifiable information should be recorded.
+                    </p>
+                    <p>
+                        The national Patient Safety team in NHS Improvement use techniques to ensure that any inadvertently entered patient identifiable information is removed.
+                    </p>
+                </div>
+            </details>
+            <details>
+                <summary><span class="summary">Who will be given the details of incidents that I record?</span></summary>
+                <div class="panel panel-border-narrow">
+                    <p>
+                        Information regarding those involved in an incident will not be shared beyond those with a national remit for learning from incidents (including NHS Improvement, CQC and MHRA).
+                    </p>
+                    <p>
+                        This service does not replace local practices for investigating and managing incidents.
+                    </p>
+                </div>
+            </details>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

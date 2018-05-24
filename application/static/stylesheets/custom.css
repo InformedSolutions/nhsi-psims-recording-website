@@ -1,0 +1,70 @@
+.unbranded * {
+  /* Use the universal selector and !important to *ALWAYS OVERRIDE* GDS Transport */
+  font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", sans-serif !important;
+
+  #footer {
+    border: 0;
+    background: white;
+  }
+}
+
+#global-header {
+  background-color: #005EB8;
+}
+
+#global-header .header-wrapper {
+  background-color: #005EB8;
+}
+
+#global-header #logo {
+  float: left;
+  overflow: visible;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  border-bottom: 1px solid transparent;
+  background: url(../images/nhsi-logo-resized.png) no-repeat;
+  background-size: 113px 51px;
+  background-color: #005EB8;
+  background-position: 0 0; }
+
+/* Global header bar */
+#global-header-bar {
+  height: 10px;
+  background-color: #003087; }
+
+.phase-banner{
+  max-width: 960px;
+  margin: auto;
+}
+
+#global-header .header-proposition {
+  padding-top: 10px!important;
+  background-color: #005EB8; }
+
+.alert-default {
+  border-color: $light-blue;
+  background-color: mix(white, $light-blue, 90%);
+}
+
+@import "chosen";
+@import "chosen-govuk";
+
+ul.chosen-choices {
+  background-image: url('../images/chosenarrow.png')!important;
+  background-repeat: no-repeat;
+  background-position: 99% 50%;
+  padding-right: 5% !important;
+}
+
+.chosen-container-single .chosen-single {
+  background: none !important;
+  background-color: #ffffff!important;
+  border: none!important;
+  box-shadow: none!important;
+}
+
+

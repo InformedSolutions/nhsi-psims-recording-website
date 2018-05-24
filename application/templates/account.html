@@ -1,0 +1,65 @@
+{% extends 'nhsi_template.html' %}
+{% block page_title %}PSIMS Incident Recording{% endblock %}
+{% load static %}
+{% load govuk_template_base %}
+
+{% block content %}
+
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <a class="link-back" href="javascript:history.back()">Back</a>
+            <form class="form" action="{% url 'account_choice' %}" method="post">
+                {% csrf_token %}
+
+                <div class="form-group">
+
+                    <h1 class="heading-large">Account selection</h1>
+
+                    <p>In order to tailor questions to your healthcare provider or setting, log in or create an account to continue.</p>
+                    <p>You may continue anonymously, but we will not be able to send you feedback and updates on your patient safety incidents.</p>
+
+                    <fieldset>
+                        <legend>
+                            <h2 class="heading-medium">
+                                Choose an account type to continue
+                            </h2>
+                            <p class="form-hint">
+                                Select one
+                            </p>
+
+                        </legend>
+
+                        <div class="multiple-choice">
+                            <input id="current-account" type="radio" name="account" value="current-account">
+                            <label for="current-account">
+                                I already have an NHS Improvement account
+                            </label>
+
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="new-account" type="radio" name="account" value="new-account">
+                            <label for="new-account">I want to create an NHS Improvement account</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="no-account" type="radio" name="account" value="no-account">
+                            <label for="no-account">I want to proceed anonymously</label>
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <div class="form-group">
+                    <input class="button" type="submit" value="Continue">
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+

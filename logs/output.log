@@ -1,0 +1,1959 @@
+2018-05-23 11:12:12,799 template.views.index INFO     Example log usage
+2018-05-23 11:14:23,302 template.views.index INFO     Example log usage
+2018-05-23 11:14:36,792 template.views.index INFO     Example log usage
+2018-05-23 12:00:36,046 application.views.index INFO     Example log usage
+2018-05-23 13:16:05,931 application.views.index INFO     Example log usage
+2018-05-23 13:38:39,937 application.views.index INFO     Example log usage
+2018-05-23 13:38:59,489 django.request WARNING  Not Found: /account.html
+2018-05-23 13:38:59,733 django.request WARNING  Not Found: /favicon.ico
+2018-05-23 13:40:41,076 application.views.index INFO     Example log usage
+2018-05-23 13:41:14,027 application.views.index INFO     Example log usage
+2018-05-23 14:00:30,238 application.views.index INFO     Example log usage
+2018-05-23 14:09:26,415 application.views.index INFO     Example log usage
+2018-05-23 14:09:31,172 application.views.index INFO     Example log usage
+2018-05-23 14:12:45,069 application.views.index INFO     Example log usage
+2018-05-23 14:12:50,317 django.request WARNING  Not Found: /account.html
+2018-05-23 15:38:58,084 application.views.index INFO     Example log usage
+2018-05-23 15:39:29,670 application.views.index INFO     Example log usage
+2018-05-23 15:39:32,766 django.request WARNING  Not Found: /account.html
+2018-05-23 15:40:55,743 application.views.index INFO     Example log usage
+2018-05-23 15:40:57,428 django.request WARNING  Not Found: /account.html
+2018-05-23 15:41:26,466 application.views.index INFO     Example log usage
+2018-05-23 15:41:28,038 django.request WARNING  Not Found: /account.html
+2018-05-23 15:41:45,467 application.views.index INFO     Example log usage
+2018-05-23 15:41:47,290 django.request WARNING  Not Found: /account.html
+2018-05-23 15:42:44,969 application.views.index INFO     Example log usage
+2018-05-23 15:42:46,715 django.request WARNING  Not Found: /account.html
+2018-05-23 15:43:03,961 django.request WARNING  Not Found: /account.html
+2018-05-23 15:43:16,691 django.request ERROR    Internal Server Error: /account
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/account.py", line 5, in account
+    return render(request, 'accounts.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: accounts.html
+2018-05-23 15:43:41,703 django.request ERROR    Internal Server Error: /account
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/engine.py", line 130, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: layout_unbranded.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/account.py", line 5, in account
+    return render(request, 'account.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: layout_unbranded.html
+2018-05-23 15:46:24,254 application.views.index INFO     Example log usage
+2018-05-23 15:46:33,700 django.request WARNING  Not Found: /account.html
+2018-05-23 15:47:38,309 application.views.index INFO     Example log usage
+2018-05-23 15:56:21,265 django.request WARNING  Not Found: /account-choice
+2018-05-23 16:19:53,811 django.request ERROR    Internal Server Error: /account
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'BaseServiceSettings' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/account.py", line 5, in account
+    return render(request, 'account.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 993, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 676, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 802, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/usr/local/lib/python3.6/dist-packages/govuk_template_base/service_settings.py", line 52, in header_link_url
+    return reverse(self.header_link_view_name)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/base.py", line 88, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 565, in _reverse_with_prefix
+    self._populate()
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 446, in _populate
+    dict(defaults, **url_pattern.default_kwargs),
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-05-23 16:19:54,177 django.request ERROR    Internal Server Error: /account
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/deprecation.py", line 97, in __call__
+    response = self.process_response(request, response)
+  File "/usr/local/lib/python3.6/dist-packages/debug_toolbar/middleware.py", line 134, in process_response
+    bits[-2] += toolbar.render_toolbar()
+  File "/usr/local/lib/python3.6/dist-packages/debug_toolbar/toolbar.py", line 64, in render_toolbar
+    return render_to_string('debug_toolbar/base.html', context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaulttags.py", line 314, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaulttags.py", line 447, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/base.py", line 57, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 480, in app_dict
+    self._populate()
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 446, in _populate
+    dict(defaults, **url_pattern.default_kwargs),
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-05-23 16:20:18,265 django.request ERROR    Internal Server Error: /account
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'BaseServiceSettings' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/account.py", line 5, in account
+    return render(request, 'account.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 993, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 676, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 802, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/usr/local/lib/python3.6/dist-packages/govuk_template_base/service_settings.py", line 52, in header_link_url
+    return reverse(self.header_link_view_name)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/base.py", line 88, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 565, in _reverse_with_prefix
+    self._populate()
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 446, in _populate
+    dict(defaults, **url_pattern.default_kwargs),
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-05-23 16:20:18,433 django.request ERROR    Internal Server Error: /account
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/deprecation.py", line 97, in __call__
+    response = self.process_response(request, response)
+  File "/usr/local/lib/python3.6/dist-packages/debug_toolbar/middleware.py", line 134, in process_response
+    bits[-2] += toolbar.render_toolbar()
+  File "/usr/local/lib/python3.6/dist-packages/debug_toolbar/toolbar.py", line 64, in render_toolbar
+    return render_to_string('debug_toolbar/base.html', context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaulttags.py", line 314, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaulttags.py", line 447, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/base.py", line 57, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 480, in app_dict
+    self._populate()
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 446, in _populate
+    dict(defaults, **url_pattern.default_kwargs),
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-05-23 16:20:22,116 django.request ERROR    Internal Server Error: /account
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'BaseServiceSettings' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/account.py", line 5, in account
+    return render(request, 'account.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 993, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 676, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 802, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/usr/local/lib/python3.6/dist-packages/govuk_template_base/service_settings.py", line 52, in header_link_url
+    return reverse(self.header_link_view_name)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/base.py", line 88, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 565, in _reverse_with_prefix
+    self._populate()
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 446, in _populate
+    dict(defaults, **url_pattern.default_kwargs),
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-05-23 16:20:22,342 django.request ERROR    Internal Server Error: /account
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/deprecation.py", line 97, in __call__
+    response = self.process_response(request, response)
+  File "/usr/local/lib/python3.6/dist-packages/debug_toolbar/middleware.py", line 134, in process_response
+    bits[-2] += toolbar.render_toolbar()
+  File "/usr/local/lib/python3.6/dist-packages/debug_toolbar/toolbar.py", line 64, in render_toolbar
+    return render_to_string('debug_toolbar/base.html', context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaulttags.py", line 314, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaulttags.py", line 447, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/base.py", line 57, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 480, in app_dict
+    self._populate()
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 446, in _populate
+    dict(defaults, **url_pattern.default_kwargs),
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-05-23 16:21:28,968 django.request ERROR    Internal Server Error: /account
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'BaseServiceSettings' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/account.py", line 5, in account
+    return render(request, 'account.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 993, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 676, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 802, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/usr/local/lib/python3.6/dist-packages/govuk_template_base/service_settings.py", line 52, in header_link_url
+    return reverse(self.header_link_view_name)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/base.py", line 88, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 565, in _reverse_with_prefix
+    self._populate()
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 446, in _populate
+    dict(defaults, **url_pattern.default_kwargs),
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-05-23 16:21:29,111 django.request ERROR    Internal Server Error: /account
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/deprecation.py", line 97, in __call__
+    response = self.process_response(request, response)
+  File "/usr/local/lib/python3.6/dist-packages/debug_toolbar/middleware.py", line 134, in process_response
+    bits[-2] += toolbar.render_toolbar()
+  File "/usr/local/lib/python3.6/dist-packages/debug_toolbar/toolbar.py", line 64, in render_toolbar
+    return render_to_string('debug_toolbar/base.html', context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaulttags.py", line 314, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaulttags.py", line 447, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/base.py", line 57, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 480, in app_dict
+    self._populate()
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 446, in _populate
+    dict(defaults, **url_pattern.default_kwargs),
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-05-23 16:22:24,518 django.request ERROR    Internal Server Error: /account
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'BaseServiceSettings' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/account.py", line 5, in account
+    return render(request, 'account.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 993, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 676, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 802, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/usr/local/lib/python3.6/dist-packages/govuk_template_base/service_settings.py", line 52, in header_link_url
+    return reverse(self.header_link_view_name)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/base.py", line 88, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 565, in _reverse_with_prefix
+    self._populate()
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 446, in _populate
+    dict(defaults, **url_pattern.default_kwargs),
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-05-23 16:22:24,699 django.request ERROR    Internal Server Error: /account
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/deprecation.py", line 97, in __call__
+    response = self.process_response(request, response)
+  File "/usr/local/lib/python3.6/dist-packages/debug_toolbar/middleware.py", line 134, in process_response
+    bits[-2] += toolbar.render_toolbar()
+  File "/usr/local/lib/python3.6/dist-packages/debug_toolbar/toolbar.py", line 64, in render_toolbar
+    return render_to_string('debug_toolbar/base.html', context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaulttags.py", line 314, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaulttags.py", line 447, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/base.py", line 57, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 480, in app_dict
+    self._populate()
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 446, in _populate
+    dict(defaults, **url_pattern.default_kwargs),
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-05-23 16:22:28,706 application.views.index INFO     Example log usage
+2018-05-23 16:22:28,755 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'BaseServiceSettings' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/index.py", line 9, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 993, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 676, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 802, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/usr/local/lib/python3.6/dist-packages/govuk_template_base/service_settings.py", line 52, in header_link_url
+    return reverse(self.header_link_view_name)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/base.py", line 88, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 565, in _reverse_with_prefix
+    self._populate()
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 446, in _populate
+    dict(defaults, **url_pattern.default_kwargs),
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-05-23 16:22:28,940 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/deprecation.py", line 97, in __call__
+    response = self.process_response(request, response)
+  File "/usr/local/lib/python3.6/dist-packages/debug_toolbar/middleware.py", line 134, in process_response
+    bits[-2] += toolbar.render_toolbar()
+  File "/usr/local/lib/python3.6/dist-packages/debug_toolbar/toolbar.py", line 64, in render_toolbar
+    return render_to_string('debug_toolbar/base.html', context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaulttags.py", line 314, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaulttags.py", line 447, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/base.py", line 57, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 480, in app_dict
+    self._populate()
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 446, in _populate
+    dict(defaults, **url_pattern.default_kwargs),
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-05-23 16:22:32,670 application.views.index INFO     Example log usage
+2018-05-23 16:22:32,704 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'BaseServiceSettings' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/index.py", line 9, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 993, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 676, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 802, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/usr/local/lib/python3.6/dist-packages/govuk_template_base/service_settings.py", line 52, in header_link_url
+    return reverse(self.header_link_view_name)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/base.py", line 88, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 565, in _reverse_with_prefix
+    self._populate()
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 446, in _populate
+    dict(defaults, **url_pattern.default_kwargs),
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-05-23 16:22:32,852 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/deprecation.py", line 97, in __call__
+    response = self.process_response(request, response)
+  File "/usr/local/lib/python3.6/dist-packages/debug_toolbar/middleware.py", line 134, in process_response
+    bits[-2] += toolbar.render_toolbar()
+  File "/usr/local/lib/python3.6/dist-packages/debug_toolbar/toolbar.py", line 64, in render_toolbar
+    return render_to_string('debug_toolbar/base.html', context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaulttags.py", line 314, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaulttags.py", line 447, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/base.py", line 57, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 480, in app_dict
+    self._populate()
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 446, in _populate
+    dict(defaults, **url_pattern.default_kwargs),
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-05-23 16:23:14,974 application.views.index INFO     Example log usage
+2018-05-23 16:23:15,060 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'BaseServiceSettings' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/index.py", line 9, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 993, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 676, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 802, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/usr/local/lib/python3.6/dist-packages/govuk_template_base/service_settings.py", line 52, in header_link_url
+    return reverse(self.header_link_view_name)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/base.py", line 88, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 565, in _reverse_with_prefix
+    self._populate()
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 446, in _populate
+    dict(defaults, **url_pattern.default_kwargs),
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-05-23 16:23:15,234 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/deprecation.py", line 97, in __call__
+    response = self.process_response(request, response)
+  File "/usr/local/lib/python3.6/dist-packages/debug_toolbar/middleware.py", line 134, in process_response
+    bits[-2] += toolbar.render_toolbar()
+  File "/usr/local/lib/python3.6/dist-packages/debug_toolbar/toolbar.py", line 64, in render_toolbar
+    return render_to_string('debug_toolbar/base.html', context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaulttags.py", line 314, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaulttags.py", line 447, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/base.py", line 57, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 480, in app_dict
+    self._populate()
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 446, in _populate
+    dict(defaults, **url_pattern.default_kwargs),
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-05-23 16:23:46,524 application.views.index INFO     Example log usage
+2018-05-23 16:23:46,546 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'BaseServiceSettings' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/index.py", line 9, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 993, in render
+    output = self.filter_expression.resolve(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 676, in resolve
+    obj = self.var.resolve(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 802, in resolve
+    value = self._resolve_lookup(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+  File "/usr/local/lib/python3.6/dist-packages/govuk_template_base/service_settings.py", line 52, in header_link_url
+    return reverse(self.header_link_view_name)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/base.py", line 88, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 565, in _reverse_with_prefix
+    self._populate()
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 446, in _populate
+    dict(defaults, **url_pattern.default_kwargs),
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-05-23 16:23:46,696 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/deprecation.py", line 97, in __call__
+    response = self.process_response(request, response)
+  File "/usr/local/lib/python3.6/dist-packages/debug_toolbar/middleware.py", line 134, in process_response
+    bits[-2] += toolbar.render_toolbar()
+  File "/usr/local/lib/python3.6/dist-packages/debug_toolbar/toolbar.py", line 64, in render_toolbar
+    return render_to_string('debug_toolbar/base.html', context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaulttags.py", line 314, in render
+    return nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/defaulttags.py", line 447, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/base.py", line 57, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 480, in app_dict
+    self._populate()
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 446, in _populate
+    dict(defaults, **url_pattern.default_kwargs),
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+2018-05-23 16:24:43,834 application.views.index INFO     Example log usage
+2018-05-23 16:24:50,759 django.security.csrf WARNING  Forbidden (CSRF token missing or incorrect.): /account_choice
+2018-05-23 16:26:48,369 django.request ERROR    Internal Server Error: /account_choice
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/account.py", line 8, in account_choice
+    choice = request.body.account
+AttributeError: 'bytes' object has no attribute 'account'
+2018-05-23 16:39:15,480 django.request ERROR    Internal Server Error: /account_choice
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/account.py", line 8, in account_choice
+    choice = request.body.account
+AttributeError: 'bytes' object has no attribute 'account'
+2018-05-23 16:40:33,218 django.request ERROR    Internal Server Error: /account_choice
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/account.py", line 8, in account_choice
+    choice = request.param('account')
+AttributeError: 'WSGIRequest' object has no attribute 'param'
+2018-05-24 10:26:06,803 application.views.index INFO     Example log usage
+2018-05-24 11:16:13,968 application.views.index INFO     Example log usage
+2018-05-24 11:17:51,602 application.views.index INFO     Example log usage
+2018-05-24 11:17:53,275 application.views.index INFO     Example log usage
+2018-05-24 11:20:11,448 application.views.index INFO     Example log usage
+2018-05-24 11:22:34,418 application.views.index INFO     Example log usage
+2018-05-24 11:31:41,032 application.views.index INFO     Example log usage
+2018-05-24 11:33:05,080 application.views.index INFO     Example log usage
+2018-05-24 11:33:59,050 application.views.index INFO     Example log usage
+2018-05-24 11:34:32,327 application.views.index INFO     Example log usage
+2018-05-24 11:38:19,549 application.views.index INFO     Example log usage
+2018-05-24 11:38:31,872 application.views.index INFO     Example log usage
+2018-05-24 11:42:57,109 application.views.index INFO     Example log usage
+2018-05-24 11:54:37,895 application.views.index INFO     Example log usage
+2018-05-24 11:55:24,746 application.views.index INFO     Example log usage
+2018-05-24 12:02:38,520 application.views.index INFO     Example log usage
+2018-05-24 12:02:50,988 application.views.index INFO     Example log usage
+2018-05-24 12:07:24,230 application.views.index INFO     Example log usage
+2018-05-24 14:01:33,242 application.views.index INFO     Example log usage
+2018-05-24 14:01:37,431 application.views.index INFO     Example log usage
+2018-05-24 14:01:50,885 application.views.index INFO     Example log usage
+2018-05-24 14:03:58,109 application.views.index INFO     Example log usage
+2018-05-24 14:04:23,846 application.views.index INFO     Example log usage
+2018-05-24 14:06:24,214 application.views.index INFO     Example log usage
+2018-05-24 14:06:33,972 application.views.index INFO     Example log usage
+2018-05-24 14:07:35,862 application.views.index INFO     Example log usage
+2018-05-24 14:09:51,770 application.views.index INFO     Example log usage
+2018-05-24 14:09:51,778 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/engine.py", line 130, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: nhsi_template.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/index.py", line 9, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: nhsi_template.html
+2018-05-24 14:09:52,927 django.request WARNING  Not Found: /favicon.ico
+2018-05-24 14:10:53,544 application.views.index INFO     Example log usage
+2018-05-24 14:11:15,083 application.views.index INFO     Example log usage
+2018-05-24 14:12:30,493 application.views.index INFO     Example log usage
+2018-05-24 14:12:35,725 application.views.index INFO     Example log usage
+2018-05-24 14:14:13,597 application.views.index INFO     Example log usage
+2018-05-24 14:15:09,364 application.views.index INFO     Example log usage
+2018-05-24 14:20:04,363 application.views.index INFO     Example log usage
+2018-05-24 14:20:31,580 application.views.index INFO     Example log usage
+2018-05-24 14:21:48,215 application.views.index INFO     Example log usage
+2018-05-24 14:23:41,404 application.views.index INFO     Example log usage
+2018-05-24 14:25:25,477 application.views.index INFO     Example log usage
+2018-05-24 14:25:38,963 application.views.index INFO     Example log usage
+2018-05-24 14:26:34,562 application.views.index INFO     Example log usage
+2018-05-24 14:28:05,541 application.views.index INFO     Example log usage
+2018-05-24 14:29:09,736 application.views.index INFO     Example log usage
+2018-05-24 14:31:16,563 application.views.index INFO     Example log usage
+2018-05-24 14:31:43,699 application.views.index INFO     Example log usage
+2018-05-24 14:32:28,774 application.views.index INFO     Example log usage
+2018-05-24 14:35:10,453 application.views.index INFO     Example log usage
+2018-05-24 14:36:54,015 application.views.index INFO     Example log usage
+2018-05-24 14:37:17,328 application.views.index INFO     Example log usage
+2018-05-24 14:38:49,985 application.views.index INFO     Example log usage
+2018-05-24 14:42:29,693 application.views.index INFO     Example log usage
+2018-05-24 14:44:36,674 application.views.index INFO     Example log usage
+2018-05-24 14:44:47,952 application.views.index INFO     Example log usage
+2018-05-24 14:45:13,400 application.views.index INFO     Example log usage
+2018-05-24 14:46:09,913 application.views.index INFO     Example log usage
+2018-05-24 14:46:49,081 application.views.index INFO     Example log usage
+2018-05-24 14:47:57,410 application.views.index INFO     Example log usage
+2018-05-24 14:47:57,415 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/index.py", line 9, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 290, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 454, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 452, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 663, in __init__
+    self.args_check(filter_name, filter_func, args)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 723, in args_check
+    (name, alen - dlen, plen))
+django.template.exceptions.TemplateSyntaxError: default requires 2 arguments, 1 provided
+2018-05-24 14:49:12,947 application.views.index INFO     Example log usage
+2018-05-24 14:49:12,955 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/index.py", line 9, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 290, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 454, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 452, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 668, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '|'https://improvement.nhs.uk/'' from 'homepage_url|'https://improvement.nhs.uk/''
+2018-05-24 14:49:43,310 application.views.index INFO     Example log usage
+2018-05-24 14:49:43,313 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/index.py", line 9, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 290, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 454, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 452, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 663, in __init__
+    self.args_check(filter_name, filter_func, args)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 723, in args_check
+    (name, alen - dlen, plen))
+django.template.exceptions.TemplateSyntaxError: default requires 2 arguments, 1 provided
+2018-05-24 14:49:56,621 application.views.index INFO     Example log usage
+2018-05-24 14:49:56,630 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/index.py", line 9, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 290, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 454, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 452, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 663, in __init__
+    self.args_check(filter_name, filter_func, args)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 723, in args_check
+    (name, alen - dlen, plen))
+django.template.exceptions.TemplateSyntaxError: default requires 2 arguments, 1 provided
+2018-05-24 14:51:09,272 application.views.index INFO     Example log usage
+2018-05-24 14:51:09,277 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/index.py", line 9, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 290, in do_extends
+    nodelist = parser.parse()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 454, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 452, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 663, in __init__
+    self.args_check(filter_name, filter_func, args)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 723, in args_check
+    (name, alen - dlen, plen))
+django.template.exceptions.TemplateSyntaxError: default requires 2 arguments, 1 provided
+2018-05-24 14:51:29,498 application.views.index INFO     Example log usage
+2018-05-24 14:51:51,068 application.views.index INFO     Example log usage
+2018-05-24 15:17:36,025 application.views.index INFO     Example log usage
+2018-05-24 15:17:36,030 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/index.py", line 9, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 454, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 452, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 663, in __init__
+    self.args_check(filter_name, filter_func, args)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 723, in args_check
+    (name, alen - dlen, plen))
+django.template.exceptions.TemplateSyntaxError: default requires 2 arguments, 1 provided
+2018-05-24 15:18:00,510 application.views.index INFO     Example log usage
+2018-05-24 15:18:00,516 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/index.py", line 9, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 454, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 452, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 663, in __init__
+    self.args_check(filter_name, filter_func, args)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 723, in args_check
+    (name, alen - dlen, plen))
+django.template.exceptions.TemplateSyntaxError: default requires 2 arguments, 1 provided
+2018-05-24 15:18:31,067 application.views.index INFO     Example log usage
+2018-05-24 15:18:31,079 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/index.py", line 9, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 454, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 452, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 663, in __init__
+    self.args_check(filter_name, filter_func, args)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 723, in args_check
+    (name, alen - dlen, plen))
+django.template.exceptions.TemplateSyntaxError: default requires 2 arguments, 1 provided
+2018-05-24 15:19:04,476 application.views.index INFO     Example log usage
+2018-05-24 15:19:04,483 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 182, in render
+    template = context.template.engine.get_template(template_name)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/engine.py", line 130, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: includes/phase_banner_alpha.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/index.py", line 9, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: includes/phase_banner_alpha.html
+2018-05-24 15:21:24,349 application.views.index INFO     Example log usage
+2018-05-24 15:24:21,493 application.views.index INFO     Example log usage
+2018-05-24 15:24:24,922 application.views.index INFO     Example log usage
+2018-05-24 15:25:21,822 application.views.index INFO     Example log usage
+2018-05-24 15:26:51,794 application.views.index INFO     Example log usage
+2018-05-24 15:26:52,400 django.request WARNING  Not Found: /images/nhsi-logo-resized.png
+2018-05-24 15:34:32,950 application.views.index INFO     Example log usage
+2018-05-24 15:34:33,187 django.request WARNING  Not Found: /images/nhsi-logo-resized.png
+2018-05-24 15:34:36,834 application.views.index INFO     Example log usage
+2018-05-24 15:34:37,517 django.request WARNING  Not Found: /images/nhsi-logo-resized.png
+2018-05-24 15:34:42,660 application.views.index INFO     Example log usage
+2018-05-24 15:34:43,236 django.request WARNING  Not Found: /images/nhsi-logo-resized.png
+2018-05-24 15:36:29,299 application.views.index INFO     Example log usage
+2018-05-24 15:36:29,854 django.request WARNING  Not Found: /images/nhsi-logo-resized.png
+2018-05-24 15:42:08,605 application.views.index INFO     Example log usage
+2018-05-24 15:43:10,157 application.views.index INFO     Example log usage
+2018-05-24 15:43:45,239 application.views.index INFO     Example log usage
+2018-05-24 15:46:40,744 application.views.index INFO     Example log usage
+2018-05-24 15:46:40,758 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 475, in parse
+    compile_func = self.tags[command]
+KeyError: "serviceName|default:'Record"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/index.py", line 9, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 233, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 477, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 533, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until], 'or'),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 69: 'serviceName|default:'Record', expected 'endblock'. Did you forget to register or load this tag?
+2018-05-24 15:47:02,073 application.views.index INFO     Example log usage
+2018-05-24 15:50:23,759 application.views.index INFO     Example log usage
+2018-05-24 15:50:43,364 application.views.index INFO     Example log usage
+2018-05-24 16:12:08,841 application.views.index INFO     Example log usage
+2018-05-24 16:12:26,615 application.views.index INFO     Example log usage
+2018-05-24 16:13:39,135 application.views.index INFO     Example log usage
+2018-05-24 16:14:19,258 application.views.index INFO     Example log usage
+2018-05-24 16:17:33,537 application.views.index INFO     Example log usage
+2018-05-24 16:18:27,046 application.views.index INFO     Example log usage
+2018-05-24 16:19:21,060 application.views.index INFO     Example log usage
+2018-05-24 16:19:58,874 application.views.index INFO     Example log usage
+2018-05-24 16:20:02,912 application.views.index INFO     Example log usage
+2018-05-24 16:22:58,833 application.views.index INFO     Example log usage
+2018-05-24 16:23:07,210 application.views.index INFO     Example log usage
+2018-05-24 16:24:23,708 application.views.index INFO     Example log usage
+2018-05-24 16:24:45,514 application.views.index INFO     Example log usage
+2018-05-24 16:25:16,632 application.views.index INFO     Example log usage
+2018-05-24 16:25:31,235 application.views.index INFO     Example log usage
+2018-05-24 16:26:55,660 application.views.index INFO     Example log usage
+2018-05-24 16:26:55,676 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/index.py", line 9, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 454, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 452, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 668, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: ' to the NHS Improvement homepage' from 'Go to the NHS Improvement homepage'
+2018-05-24 16:27:06,258 application.views.index INFO     Example log usage
+2018-05-24 16:30:17,847 application.views.index INFO     Example log usage
+2018-05-24 16:32:55,545 application.views.index INFO     Example log usage
+2018-05-24 16:33:27,221 application.views.index INFO     Example log usage
+2018-05-24 16:33:45,575 application.views.index INFO     Example log usage
+2018-05-24 16:34:13,488 application.views.index INFO     Example log usage
+2018-05-24 16:34:26,356 application.views.index INFO     Example log usage
+2018-05-24 16:34:40,866 application.views.index INFO     Example log usage
+2018-05-24 16:34:40,889 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/vagrant/source/nhsi-psims-recording-website/application/views/index.py", line 9, in index
+    return render(request, 'index.html')
+  File "/usr/local/lib/python3.6/dist-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/test/utils.py", line 98, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/usr/local/lib/python3.6/dist-packages/django/template/loader_tags.py", line 229, in do_block
+    raise TemplateSyntaxError("'%s' tag with name '%s' appears more than once" % (bits[0], block_name))
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'proposition_header' appears more than once
+2018-05-24 16:34:51,228 application.views.index INFO     Example log usage
+2018-05-24 16:35:26,306 application.views.index INFO     Example log usage
+2018-05-24 16:37:46,635 application.views.index INFO     Example log usage
+2018-05-24 16:38:26,847 application.views.index INFO     Example log usage
+2018-05-24 16:38:47,514 application.views.index INFO     Example log usage
+2018-05-24 16:46:36,300 application.views.index INFO     Example log usage
+2018-05-24 16:47:20,518 application.views.index INFO     Example log usage
+2018-05-24 16:47:44,223 application.views.index INFO     Example log usage
+2018-05-24 16:49:17,347 application.views.index INFO     Example log usage
+2018-05-24 16:51:39,995 application.views.index INFO     Example log usage
+2018-05-24 16:52:53,151 application.views.index INFO     Example log usage
+2018-05-24 16:54:16,829 application.views.index INFO     Example log usage
+2018-05-24 16:55:15,203 application.views.index INFO     Example log usage
+2018-05-24 16:55:33,143 application.views.index INFO     Example log usage
+2018-05-24 16:57:00,632 application.views.index INFO     Example log usage
+2018-05-24 16:59:18,867 application.views.index INFO     Example log usage
+2018-05-24 16:59:59,381 application.views.index INFO     Example log usage
+2018-05-24 17:01:52,052 application.views.index INFO     Example log usage
+2018-05-24 17:06:23,898 application.views.index INFO     Example log usage
+2018-05-24 17:08:41,819 application.views.index INFO     Example log usage
+2018-05-24 17:09:02,488 application.views.index INFO     Example log usage
+2018-05-24 17:09:51,500 application.views.index INFO     Example log usage
+2018-05-24 17:10:33,713 application.views.index INFO     Example log usage
+2018-05-24 17:11:44,959 application.views.index INFO     Example log usage
+2018-05-24 17:14:35,846 application.views.index INFO     Example log usage
+2018-05-24 17:15:12,650 application.views.index INFO     Example log usage
+2018-05-24 17:16:39,591 application.views.index INFO     Example log usage
+2018-05-24 17:17:05,506 application.views.index INFO     Example log usage
+2018-05-24 17:17:19,924 application.views.index INFO     Example log usage
+2018-05-24 17:17:32,276 application.views.index INFO     Example log usage
+2018-05-24 17:19:28,287 application.views.index INFO     Example log usage
+2018-05-24 17:19:56,430 application.views.index INFO     Example log usage
+2018-05-24 17:20:10,866 application.views.index INFO     Example log usage
+2018-05-24 17:20:37,249 application.views.index INFO     Example log usage
+2018-05-24 17:20:53,688 application.views.index INFO     Example log usage
+2018-05-24 17:21:18,172 application.views.index INFO     Example log usage
+2018-05-24 17:21:45,979 application.views.index INFO     Example log usage
+2018-05-24 17:22:03,040 application.views.index INFO     Example log usage
+2018-05-24 17:22:08,838 application.views.index INFO     Example log usage
+2018-05-24 17:22:35,416 application.views.index INFO     Example log usage
+2018-05-24 17:23:42,171 application.views.index INFO     Example log usage
+2018-05-24 17:28:43,813 application.views.index INFO     Example log usage
+2018-05-24 17:28:59,065 application.views.index INFO     Example log usage
+2018-05-24 17:29:22,520 application.views.index INFO     Example log usage
+2018-05-24 17:29:30,545 application.views.index INFO     Example log usage
+2018-05-24 17:29:38,460 application.views.index INFO     Example log usage
+2018-05-24 17:30:05,145 application.views.index INFO     Example log usage
+2018-05-24 17:30:33,778 application.views.index INFO     Example log usage
+2018-05-24 17:30:42,877 application.views.index INFO     Example log usage
+2018-05-24 17:34:36,469 application.views.index INFO     Example log usage
+2018-05-24 17:34:53,211 application.views.index INFO     Example log usage
+2018-05-24 17:35:38,616 application.views.index INFO     Example log usage
+2018-05-24 17:36:28,540 application.views.index INFO     Example log usage
+2018-05-24 17:36:42,271 application.views.index INFO     Example log usage
+2018-05-24 17:37:02,828 application.views.index INFO     Example log usage
+2018-05-24 17:37:42,324 application.views.index INFO     Example log usage
+2018-05-24 17:38:45,986 application.views.index INFO     Example log usage
+2018-05-24 17:39:12,427 application.views.index INFO     Example log usage
+2018-05-24 17:39:37,564 application.views.index INFO     Example log usage
+2018-05-24 17:39:48,767 application.views.index INFO     Example log usage
+2018-05-24 17:40:42,200 application.views.index INFO     Example log usage
+2018-05-24 17:41:06,434 application.views.index INFO     Example log usage
+2018-05-24 17:41:21,072 application.views.index INFO     Example log usage
+2018-05-24 17:42:24,649 application.views.index INFO     Example log usage
+2018-05-24 17:42:57,482 application.views.index INFO     Example log usage
+2018-05-24 17:43:07,273 application.views.index INFO     Example log usage
+2018-05-24 17:52:14,432 application.views.index INFO     Example log usage
