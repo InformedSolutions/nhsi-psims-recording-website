@@ -9,8 +9,7 @@ urlpatterns = [
     path('long_form', long_form, name='long_form'),
     path('fieldset_form', fieldset_form, name='fieldset_form'),
     path('revealing_form', revealing_form, name='revealing_form'),
-    path('account', account, name='account'),
-    path('account_choice', account_choice, name='account_choice')
+    path('account', account, name='account')
 ]
 
 # Django toolbar settings for development environments
