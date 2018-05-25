@@ -16,13 +16,14 @@
     <!--[if gte IE 9]><!--><link rel="stylesheet" media="all" href="{% static 'stylesheets/fonts.css' %}"/><!--<![endif]-->
     <!--[if lt IE 9]><script src="{% static 'javascripts/ie.js' %}"></script><![endif]-->
 
-    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'images/favicon-32x32.png' %}" type="image/x-icon" />
     
     <link rel="mask-icon" href="{% static 'images/gov.uk_logotype_crown.svg' %}" color="#0b0c0c">
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon-180x180.png' %}">
     <link rel="apple-touch-icon" sizes="167x167" href="{% static 'images/apple-touch-icon-167x167.png' %}">
     <link rel="apple-touch-icon" sizes="152x152" href="{% static 'images/apple-touch-icon-152x152.png' %}">
     <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     
     <meta name="theme-color" content="#0b0c0c" />
@@ -77,21 +78,20 @@
       <div class="footer-wrapper">
         {% block footer_top %}{% endblock %}
 
-        <div class="footer-meta">
+        <p class="footer-meta">
           <div class="footer-meta-inner">
-            {% block footer_support_links %}{% endblock %}
-
-            <div class="open-government-licence">
-              <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
-              
-                {% block licence_message %}<p>All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>{% endblock %}
-              
-            </div>
+            <p class="social">
+              <a href="https://twitter.com/NHSImprovement" class="fa-padded"><i class="fab fa-twitter-square fa-2x"></i></a>
+              <a href="https://www.linkedin.com/company/nhs-improvement" class="fa-padded"><i class="fab fa-linkedin fa-2x"></i></a>
+              <a href="https://www.youtube.com/channel/UC6rzUVH0Uqk62zc7eX8yajA"><i class="fab fa-youtube-square fa-2x"></i></a>
+            </p>
           </div>
 
-          <div class="copyright">
-            <a href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/">{{ crown_copyright_message|default:'&copy; Crown copyright' }}</a>
-          </div>
+          <p class="flat-menu">
+            <a href="/cookies/" class="menu-padded">Cookies</a>
+            <a href="/terms-conditions/" class="menu-padded">Terms and conditions</a>
+            <a href="/accessibility/">Accessibility</a>
+          </p>
         </div>
       </div>
     </footer>

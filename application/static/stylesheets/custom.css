@@ -67,4 +67,68 @@ ul.chosen-choices {
   box-shadow: none!important;
 }
 
+#footer {
+    background-color: #e7eced;
+    color: #425563;
+    font-size: 14px;
+    padding: 10px 0 50px 0;
+    border-top: 0;
+}
 
+#footer .footer-wrapper {
+    background-color: #e7eced;
+    padding-top: 10px;
+}
+
+#footer a {
+    text-decoration: underline;
+    color: #425563;
+}
+
+#footer p {
+    color: #425563;
+}
+
+#footer .footer-meta {
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.social {
+    position: relative;
+    top: 1px;
+    padding-bottom: 10px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    vertical-align: top;
+    -webkit-font-smoothing: antialiased;
+}
+
+.flat-menu {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    vertical-align: top;
+    -webkit-font-smoothing: antialiased;
+}
+
+.fa, .far, .fas {
+    font-family: Font Awesome\ 5 Free !important;
+}
+
+.fab {
+    font-family: Font Awesome\ 5 Brands !important;
+}
+
+.fa-padded {
+    padding: 0 20px 0 0;
+}
+
+.menu-padded {
+    padding: 0 12px 0 0;
+}
