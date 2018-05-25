@@ -1,0 +1,22 @@
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+### Vim files ###
+*~
+*.swp
+*.swo
+*.swn
+
+### XML test output logs ###
+xmlrunner/*
+
+### Application logs ###
+logs/*
+
+### Static assets ###
+staticfiles/*
+
+db.sqlite3
+.idea

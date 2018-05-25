@@ -1,0 +1,47 @@
+{% extends 'nhsi_template.html' %}
+
+{% block page_title %}Account Guidance{% endblock %}
+{% load static %}
+{% load govuk_template_base %}
+
+{% block content %}
+
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <a class="link-back" href="javascript:history.back()">Back</a>
+            <form class="form" action="/action" method="post">
+                <div class="form-group">
+
+                    <fieldset>
+                        <legend>
+                            <h1 class="heading-large">
+                                 Anonymous recording
+                            </h1>
+                        </legend>
+
+                        <p class="lede">You are welcome to access patient safety learning anonymously.</p>
+                        <p>Please note that if you continue:</p>
+                        <ul class="list list-bullet">
+                            <li>We will not be able to send you information about incidents you record</li>
+                            <li>We will not be able to tailor the experience to your speciality</li>
+                            <li>You will not be able to bookmark reports and data for use at a later date</li>
+                        </ul>
+
+                    </fieldset>
+                </div>
+
+                <div class="form-group">
+                    <input class="button" type="submit" value="Continue">
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+
