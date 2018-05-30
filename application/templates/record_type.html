@@ -1,0 +1,83 @@
+{% extends 'nhsi_template.html' %}
+
+{% block page_title %}Record Information{% endblock %}
+{% load static %}
+{% load govuk_template_base %}
+
+{% block inner_content %}
+
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <a class="link-back" href="/">Back</a>
+            <form class="form" method="post">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <fieldset>
+                        <legend>
+                            <h1 class="heading-large">
+                                What do you want to record?
+                            </h1>
+
+                        </legend>
+
+                        <div class="multiple-choice">
+                            <input id="record-type-1" type="radio" name="record-type" value="incident">
+                            <label for="record-type-1" class="form-label-bold">
+                                A patient safety incident
+                                <span class="form-hint">
+                                    Something happened (or should have happened, but didn’t) and harmed, or could have harmed, a patient receiving NHS-funded care
+                                </span>
+                            </label>
+
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="record-type-2" type="radio" name="record-type" value="outcome">
+                            <label for="record-type-2" class="form-label-bold">
+                                An unexpected poor outcome which may have involved safety issues
+                                <span class="form-hint">
+                                   An unexpected patient outcome that needs review in case it was caused by a previously unrecognised patient safety incident
+                                </span>
+                            </label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="record-type-3" type="radio" name="record-type" value="risk">
+                            <label for="record-type-3" class="form-label-bold">
+                                A risk to patient safety
+                                <span class="form-hint">
+                                    Something that has not resulted in a patient safety incident yet, but could in the future
+                                </span>
+                            </label>
+                        </div>
+                        <p>
+                        <h2 class="heading-medium">
+                            or
+                        </h2>
+
+
+                        <div class="multiple-choice">
+                            <input id="record-type-4" type="radio" name="record-type" value="positive">
+                            <label for="record-type-4" class="form-label-bold">
+                                A positive experience
+                                <span class="form-hint">
+                                    Something positive that you have experienced or observed and want to share
+                                </span>
+                            </label>
+                        </div>
+
+                    </fieldset>
+                </div>
+
+
+                <div class="form-group">
+                    <input class="button" type="submit" value="Continue">
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}

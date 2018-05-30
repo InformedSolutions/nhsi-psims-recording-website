@@ -10,7 +10,9 @@
     <div class="grid-row">
         <div class="column-two-thirds">
             <a class="link-back" href="javascript:history.back()">Back</a>
-            <form class="form" action="/action" method="post">
+            <form class="form" method="post">
+                {% csrf_token %}
+
                 <div class="form-group">
 
                     <fieldset>
