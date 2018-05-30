@@ -1,0 +1,56 @@
+{% extends 'nhsi_template.html' %}
+
+{% block page_title %}Choose an Action{% endblock %}
+{% load static %}
+{% load govuk_template_base %}
+
+{% block inner_content %}
+
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <a class="link-back" href="javascript:history.back()">Back</a>
+            <form class="form" method="post">
+                {% csrf_token %}
+
+                <div class="form-group">
+
+                    <fieldset>
+                        <legend>
+                            <h1 class="heading-large">
+                                Choose an action to continue
+                            </h1>
+
+                        </legend>
+
+                        <div class="multiple-choice">
+                            <input id="patient-safety" type="radio" name="action" value="patient-safety">
+                            <label for="patient-safety">
+                                Record a patient safety event
+                            </label>
+
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="statistics" type="radio" name="action" value="statistics">
+                            <label for="statistics">Understand national patient safety statistics</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="experience" type="radio" name="action" value="experience">
+                            <label for="experience">Access and share learning and improvement actions</label>
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <div class="form-group">
+                    <input class="button" type="submit" value="Continue">
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}
