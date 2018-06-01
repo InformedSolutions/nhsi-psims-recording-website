@@ -6,14 +6,29 @@
 
 {% block inner_content %}
 
-<br>
-<form method="post">
-    <div>
-        {{ form }}
-        {% csrf_token %}
-        {{ form.submit_button }}
-    </div>
-</form>
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <a class="link-back" href="javascript:history.back()">Back</a>
+            <form class="form" method="post">
 
+                {% if form_heading != "" %}
+                    <h1 class="heading-large">
+                        {{ form_heading }}
+                    </h1>
+                {% endif %}
+
+                {% for element in elements %}
+                    {% include element.type with data=element %}
+                {% endfor %}
+
+                {% csrf_token %}
+
+                {{ form.submit_button }}
+            </form>
+
+        </div>
+    </div>
+</main>
 
 {% endblock %}

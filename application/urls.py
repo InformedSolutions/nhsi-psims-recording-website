@@ -12,7 +12,8 @@ urlpatterns = [
     path('account', account, name='account'),
     path('account_guidance', account_guidance, name='account_guidance'),
     path('action', action, name='action'),
-    path('record_type', record_type, name='record_type')
+    path('record_type', record_type, name='record_type'),
+    path('date_form', date_form, name='date_form')
 ]
 
 # Django toolbar settings for development environments

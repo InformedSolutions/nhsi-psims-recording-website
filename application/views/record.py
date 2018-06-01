@@ -16,4 +16,5 @@ def record_type(request):
         return render(request, 'record_type.html')
     else:
         type = request.POST.get('record-type')
-        return render(request, 'record_type.html')
+        return HttpResponseRedirect('/date_form')
+        #return render(request, 'record_type.html')
