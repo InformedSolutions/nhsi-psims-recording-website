@@ -1,0 +1,12 @@
+<div {% if data.istarget %}
+     class="panel panel-border-narrow js-hidden"
+     {% endif %}
+     id="{{ data.id }}">
+    <div class="form-group">
+        <label class="form-label-bold" for="{{ data.id }}-input">{{ data.label }}</label>
+        <p class="form-hint">
+            {{ data.guidance }}
+        </p>
+        <textarea class="form-control form-control-3-4" id="{{ data.id }}-input" name="{{ data.id }}" rows="5"></textarea>
+    </div>
+</div>

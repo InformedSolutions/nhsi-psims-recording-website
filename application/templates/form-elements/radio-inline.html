@@ -1,0 +1,29 @@
+<div class="form-group {% if data.istarget %}
+     panel panel-border-narrow js-hidden
+     {% endif %}"
+     id="{{ data.id }}">
+    <fieldset class="inline">
+        <legend>
+            <h2 class="heading-medium">
+                {{ data.label }}
+            </h2>
+        </legend>
+        <p class="form-hint">
+            {{ data.guidance }}
+        </p>
+
+        <div class="multiple-choice" {% if data.target.true %}
+             data-target="{{ data.target.true }}"
+            {% endif %}>
+            <input id="{{ data.id }}-true" type="radio" name="{{ data.id }}" value="yes">
+            <label for="{{ data.id }}-true">Yes</label>
+        </div>
+        <div class="multiple-choice" {% if data.target.false %}
+             data-target="{{ data.target.false }}"
+            {% endif %}>
+            <input id="{{ data.id }}-false" type="radio" name="{{ data.id }}" value="no">
+            <label for="{{ data.id }}-false">No</label>
+        </div>
+
+    </fieldset>
+</div>
