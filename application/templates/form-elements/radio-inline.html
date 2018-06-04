@@ -1,4 +1,4 @@
-<div class="form-group {% if data.istarget %}
+<div class="form-group{% if data.haserror %}-error{% endif %} {% if data.istarget %}
      panel panel-border-narrow js-hidden
      {% endif %}"
      id="{{ data.id }}">
@@ -7,11 +7,13 @@
             <h2 class="heading-medium">
                 {{ data.label }}
             </h2>
+            <p class="form-hint">
+                {{ data.guidance }}
+            </p>
+            {% if data.haserror %}
+                <span class="error-message">{{ data.error_message }}</span>
+            {% endif %}
         </legend>
-        <p class="form-hint">
-            {{ data.guidance }}
-        </p>
-
         <div class="multiple-choice" {% if data.target.true %}
              data-target="{{ data.target.true }}"
             {% endif %}>
@@ -24,6 +26,5 @@
             <input id="{{ data.id }}-false" type="radio" name="{{ data.id }}" value="no">
             <label for="{{ data.id }}-false">No</label>
         </div>
-
     </fieldset>
 </div>

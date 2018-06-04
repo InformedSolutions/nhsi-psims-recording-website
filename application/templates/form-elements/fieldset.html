@@ -1,0 +1,9 @@
+<fieldset>
+    <legend class="heading-medium">{{ data.label }}</legend>
+    <p class="form-hint">
+        {{ data.guidance }}
+    </p>
+    {% for element in data.elements %}
+        {% include element.type with data=element %}
+    {% endfor %}
+</fieldset>
