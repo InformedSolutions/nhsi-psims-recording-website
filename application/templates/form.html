@@ -12,6 +12,22 @@
             <a class="link-back" href="javascript:history.back()">Back</a>
             <form class="form" method="post">
 
+                {% if validation %}
+                    <div class="error-summary" role="group">
+                        <h1 class="heading-medium error-summary-heading" id="error-summary">Check the Following</h1>
+                        <ul class="error-summary-list">
+                            {% for message in validation %}
+                                    <li class="error-summary-list__item" data-errorcode="{{ message.code }}">
+                                        <a  class="error-summary-list__item-anchor" href="{{ message.href }}">
+                                            <!-- using hyphen on rendering so multiple validation messages can be rendered with line breaks -->
+                                            <span class="error-summary-list__item-label">{{ message.label }}</span>
+                                        </a>
+                                    </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+
                 {% if form_heading != "" %}
                     <h1 class="heading-large">
                         {{ form_heading }}
@@ -24,7 +40,7 @@
 
                 {% csrf_token %}
 
-                {{ form.submit_button }}
+                <input type="submit" class="button" value="{{ submit_text }}">
             </form>
 
         </div>
