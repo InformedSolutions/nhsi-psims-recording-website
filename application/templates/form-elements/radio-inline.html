@@ -17,13 +17,13 @@
         <div class="multiple-choice" {% if data.target.true %}
              data-target="{{ data.target.true }}"
             {% endif %}>
-            <input id="{{ data.id }}-true" type="radio" name="{{ data.id }}" value="yes">
+            <input id="{{ data.id }}-true" type="radio" name="{{ data.id }}" value="true">
             <label for="{{ data.id }}-true">Yes</label>
         </div>
         <div class="multiple-choice" {% if data.target.false %}
              data-target="{{ data.target.false }}"
             {% endif %}>
-            <input id="{{ data.id }}-false" type="radio" name="{{ data.id }}" value="no">
+            <input id="{{ data.id }}-false" type="radio" name="{{ data.id }}" value="false">
             <label for="{{ data.id }}-false">No</label>
         </div>
     </fieldset>
