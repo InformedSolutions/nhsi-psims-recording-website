@@ -1,6 +1,5 @@
 from .base import render_form
 
-
 def date_form(request):
 
     elements = [
@@ -197,4 +196,4 @@ def date_form(request):
         }
     ]
 
-    return render_form(request, elements, "")
+    return render_form(request, elements, "The Ultimate Set of Questions")
