@@ -90,13 +90,21 @@ Does any necessary formatting, e.g. for dates.
 '''
 def collect_response(request, element):
     if element['type'] == 'date':
-        # Dates are comprised of three inputs - collect each
+        # Dates are comprised of two or three inputs - collect each depending on type
         day = request.POST.get(element['id'] + '-day')
         month = request.POST.get(element['id'] + '-month')
         year = request.POST.get(element['id'] + '-year')
 
         # Combine components to make a save-friendly date
-        date = day + '-' + month + '-' + year
+        if 'approx_date' in element:
+            if element['approx_date']:
+                # There is no day in an approx-date
+                date = month + '-' + year
+            else:
+                date = day + '-' + month + '-' + year
+        else:
+            date = day + '-' + month + '-' + year
+
         element['response'] = date
 
         # Also create a special property containing the individual components which supports re-rendering:

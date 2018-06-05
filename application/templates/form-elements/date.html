@@ -15,10 +15,12 @@
             {% endif %}
         </legend>
         <div class="form-date">
+            {% if not data.approx_date %}
             <div class="form-group form-group-day">
                 <label for="{{ data.id }}-day">Day</label>
                 <input class="form-control{% if data.haserror %}-error{% endif %}" id="{{ data.id }}-day" name="{{ data.id }}-day" type="number" pattern="[0-9]*" min="0" max="31" {% if data.response_list %}value="{{ data.response_list.day }}"{% endif %}>
             </div>
+            {% endif %}
 
             <div class="form-group form-group-month">
                 <label for="{{ data.id }}-month">Month</label>

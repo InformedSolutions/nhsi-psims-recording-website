@@ -193,7 +193,63 @@ def date_form(request):
             "istarget": True,
             "novalidate": False,
             "required": True
+        },
+        {
+            "type": "date",
+            "id": "8d8ikikd665",
+            "label": "In which month and year were you born?",
+            "guidance": "I bet you'll find this pretty tricky",
+            "istarget": False,
+            "novalidate": False,
+            "required": True,
+            "approx_date": True
         }
     ]
 
-    return render_form(request, elements, "The Ultimate Set of Questions")
+    date_elements = [
+        {
+            "type": "radio-inline",
+            "id": "f8f8kjdi44j",
+            "label": "Did the incident occur today?",
+            "guidance": "",
+            "target": {
+                "false": "75799ffff"
+            },
+            "novalidate": False,
+            "required": True
+        },
+        {
+            "type": "radio-inline",
+            "id": "75799ffff",
+            "label": "Do you know the exact date of the incident?",
+            "guidance": "",
+            "target": {
+                "true": "f8k3jn33di",
+                "false": "yd65c6ll0"
+            },
+            "istarget": True,
+            "novalidate": False,
+            "required": True
+        },
+        {
+            "type": "date",
+            "id": "f8k3jn33di",
+            "label": "",
+            "guidance": "For example, 20 11 2017",
+            "istarget": True,
+            "novalidate": False,
+            "required": True
+        },
+        {
+            "type": "date",
+            "id": "yd65c6ll0",
+            "label": "",
+            "guidance": "If you're not sure, tell us roughly when you think it happened",
+            "istarget": True,
+            "novalidate": False,
+            "required": True,
+            "approx_date": True
+        }
+    ]
+
+    return render_form(request, date_elements, "Date of incident")
