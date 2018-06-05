@@ -14,7 +14,7 @@
         </legend>
         {% for option in data.options %}
             <div class="multiple-choice">
-                <input type="checkbox" name="{{ data.id }}-{{ option.id }}" value="{{ option.label }}" class="form-control" id="{{ data.id }}-{{ option.id }}" />
+                <input type="checkbox" name="{{ data.id }}-{{ option.id }}" value="{{ option.label }}" class="form-control" id="{{ data.id }}-{{ option.id }}" {% if option.ticked %}checked="checked"{% endif %}/>
                 <label id="{{ data.id }}-{{ option.id }}-label" for="{{ data.id }}-{{ option.id }}">{{ option.label }}</label>
             </div>
         {% endfor %}
