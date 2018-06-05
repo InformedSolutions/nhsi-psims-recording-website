@@ -39,8 +39,9 @@ def validate_form(elements):
 '''
 Evaluates the conditions for a particular question to be valid.
 This requires checks of:
-    - the question's response, e.g. is it blank
-    - the question's visibility - if it is not visible, do not validate (response would be blank
+    - the question's response, e.g. is it blank or None
+    - the question's visibility - if it is not visible, do not validate (response would be blank which otherwise
+      could trigger an error)
     - whether the question is required or not
 
 This will also strip responses from questions which are not visible.  This can occur when a dependent question is
@@ -54,7 +55,16 @@ def assess_condition(question, response, elements):
                 if question['response'] == '--':
                     return build_message("1", question['id'], "This question is required", response)
                 else:
-                    components = [question['response_list']['day'], question['response_list']['month'], question['response_list']['year']]
+                    # For approx-dates only evaluate the month and year
+                    if 'approx_date' in question:
+                        if question['approx_date']:
+                            components = [question['response_list']['month'], question['response_list']['year']]
+                        else:
+                            components = [question['response_list']['day'], question['response_list']['month'],
+                                          question['response_list']['year']]
+                    else:
+                        components = [question['response_list']['day'], question['response_list']['month'], question['response_list']['year']]
+
                     incomplete_date = False
                     # Check each individual component - if any of them are blank the date is not complete
                     for component in components:
