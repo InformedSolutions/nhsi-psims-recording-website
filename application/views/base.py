@@ -1,6 +1,6 @@
 # A generic form-rendering function that renders the correct form based on the request method
 from django.shortcuts import render
-from ..validation import validate_form, question_visible
+from ..validation import validate_form
 
 
 '''
