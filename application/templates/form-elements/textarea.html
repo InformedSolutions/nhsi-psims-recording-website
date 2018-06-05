@@ -12,6 +12,6 @@
                 <span class="error-message">{{ data.error_message }}</span>
             {% endif %}
         </legend>
-        <textarea class="form-control{% if data.haserror %}-error{% endif %} form-control-3-4" id="{{ data.id }}-input" name="{{ data.id }}" rows="5"></textarea>
+        <textarea class="form-control{% if data.haserror %}-error{% endif %} form-control-3-4" id="{{ data.id }}-input" name="{{ data.id }}" rows="5">{% if data.response %}{{ data.response }}{% endif %}</textarea>
     </div>
 </div>

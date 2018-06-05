@@ -95,7 +95,7 @@ def date_form(request):
             "elements": [
                 {
                     "type": "text",
-                    "id": "98r8jd8rrde",
+                    "id": "98r8jd8rrdy",
                     "label": "How many tacos do you think you could eat in one sitting?",
                     "guidance": "",
                     "istarget": False,
@@ -104,7 +104,7 @@ def date_form(request):
                 },
                 {
                     "type": "text",
-                    "id": "98r8jewwd8de",
+                    "id": "58r8jewwd8de",
                     "label": "What about in a full day?",
                     "guidance": "I can probably eat 7 or 8 myself",
                     "istarget": False,
