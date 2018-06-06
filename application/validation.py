@@ -23,7 +23,7 @@ def validate_form(elements):
     # Iterate through each question and assess whether the conditions required to submit it are met
     for question in questions:
         try:
-            message = assess_condition(question, question['response'], elements)
+            message = assess_condition(question, elements)
             # If the response is a boolean it is not a validation error.  Only put errors into the messages list.
             if not isinstance(message, bool):
                 messages.append(message)
@@ -47,13 +47,13 @@ This requires checks of:
 This will also strip responses from questions which are not visible.  This can occur when a dependent question is
 answered but then its trigger question is answered differently which hides the question but does not clear its data.
 '''
-def assess_condition(question, response, elements):
+def assess_condition(question, elements):
     if question['required']:
         if question_visible(question, elements):
             if question['type'] == 'date':
                 # For dates the response will be DD-MM-YYYY, so check that each of these components is present
                 if question['response'] == '--':
-                    return build_message("1", question['id'], "This question is required", response)
+                    return build_message("1", question['id'], "This question is required", question['response'])
                 else:
                     # For approx-dates only evaluate the month and year
                     if 'approx_date' in question:
@@ -72,29 +72,29 @@ def assess_condition(question, response, elements):
                             incomplete_date = True
 
                     if incomplete_date:
-                        return build_message("3", question['id'], "Please supply a complete date", response)
+                        return build_message("3", question['id'], "Please supply a complete date", question['response'])
                     else:
                         # Date question has been answered fully
                         return True
 
             # General catch for empty responses
-            elif response == '' or response == None:
-                return build_message("1", question['id'], "This question is required", response)
+            elif question['response'] == '' or question['response'] == None:
+                return build_message("1", question['id'], "This question is required", question['response'])
 
             # For lists, evaluate their members to ensure they have an item and it is not empty
-            elif isinstance(response, list):
+            elif isinstance(question['response'], list):
                 # List responses expect at least one value
-                if len(response) == 0:
-                    return build_message("2", question['id'], "Choose an option", response)
+                if len(question['response']) == 0:
+                    return build_message("2", question['id'], "Choose an option", question['response'])
                 else:
                     # At least one non-empty value is expected in list responses
                     empty = True
-                    for r in response:
+                    for r in question['response']:
                         if r['choice'] != None and r['choice'] != '':
                             # A single non-empty response is enough to make the response valid
                             empty = False
                     if empty:
-                        return build_message("2", question['id'], "Choose an option", response)
+                        return build_message("2", question['id'], "Choose an option", question['response'])
                     else:
                         # Non-empty list response, valid
                         return True
