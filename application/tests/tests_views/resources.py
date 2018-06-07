@@ -23,13 +23,17 @@ def set_property(property, value, elements, id):
                 element[property] = value
 
 '''
-Test data for general re-user between tests
+Test data for general re-use between tests
 '''
 test_elements = [
     {
         "type": "radio-inline",
         "id": "uisdiudiu",
-        "label": "Do you like tacos?",
+        "label": {
+            "question": "Do you like tacos?",
+            "true": "Yes",
+            "false": "No"
+        },
         "guidance": "Tell us whether you like tacos",
         "target": {
             "true": "98r8jd8de"
@@ -49,7 +53,11 @@ test_elements = [
     {
         "type": "radio-inline",
         "id": "8rf88f89f8d",
-        "label": "What about baked beans?",
+        "label": {
+            "question": "What about baked beans?",
+            "true": "Yes",
+            "false": "No"
+        },
         "guidance": "We aren't being nosey, we just want to tailor your experience",
         "target": {
             "true": "fif8f99di",
@@ -79,7 +87,11 @@ test_elements = [
     {
         "type": "radio-inline",
         "id": "98f8ffdikk",
-        "label": "Do you know the muffin man?",
+        "label": {
+            "question": "Do you know the muffin man?",
+            "true": "Yes",
+            "false": "No"
+        },
         "guidance": "The one who lives on Drury Lane",
         "target": {
             "true": "uuuui4848"
@@ -90,7 +102,11 @@ test_elements = [
     {
         "type": "radio-inline",
         "id": "uuuui4848",
-        "label": "Do you think his muffins are any good?",
+        "label": {
+            "question": "Do you think his muffins are any good?",
+            "true": "Yes",
+            "false": "No"
+        },
         "guidance": "Between you and me, I've got my doubts",
         "target": {
             "true": "487478jjjfju"
