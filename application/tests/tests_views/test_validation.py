@@ -1,5 +1,5 @@
 from django.test import TestCase
-from ...validation import *
+from application.services.validation import *
 from ...views.base import build_paths
 from .resources import *
 import copy
@@ -8,8 +8,6 @@ import copy
 class ValidationTests(TestCase):
 
     elements = test_elements
-
-
 
     def test_can_build_message(self):
         """

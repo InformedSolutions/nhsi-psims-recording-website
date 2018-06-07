@@ -5,7 +5,7 @@
     <fieldset class="inline">
         <legend>
             <h2 class="heading-medium">
-                {{ data.label }}
+                {{ data.label.question }}
             </h2>
             <p class="form-hint">
                 {{ data.guidance }}
@@ -18,13 +18,13 @@
              data-target="{{ data.target.true }}"
             {% endif %}>
             <input id="{{ data.id }}-true" type="radio" name="{{ data.id }}" value="true" {% if data.response == 'true' %}checked="checked"{% endif %}>
-            <label for="{{ data.id }}-true">Yes</label>
+            <label for="{{ data.id }}-true">{{ data.label.true }}</label>
         </div>
         <div class="multiple-choice" {% if data.target.false %}
              data-target="{{ data.target.false }}"
             {% endif %}>
             <input id="{{ data.id }}-false" type="radio" name="{{ data.id }}" value="false" {% if data.response == 'false' %}checked="checked"{% endif %}>
-            <label for="{{ data.id }}-false">No</label>
+            <label for="{{ data.id }}-false">{{ data.label.false }}</label>
         </div>
     </fieldset>
 </div>
