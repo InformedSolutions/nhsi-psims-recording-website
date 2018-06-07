@@ -50,6 +50,7 @@ def render_form(request, elements, form_heading):
 
         else:
             # No validation errors - for now, render a generic success page
+            # In future, persist data
             return render(request, 'success.html')
 
 
