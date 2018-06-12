@@ -23,11 +23,11 @@ dummy_elements = {
             "type": "radio-inline",
             "id": "uisdiudiu",
             "label": {
-                "question": "Do you like tacos?",
+                "question": "Was the patient under 1 month old?",
                 "true": "Yes",
                 "false": "No"
             },
-            "guidance": "Tell us whether you like tacos",
+            "guidance": "At the time of incident",
             "target": {
                 "true": "98r8jd8de"
             },
@@ -37,8 +37,8 @@ dummy_elements = {
         {
             "type": "text",
             "id": "98r8jd8de",
-            "label": "Describe your perfect taco",
-            "guidance": "For example, corn tortilla with carne asada and fresh spring onion",
+            "label": "What was the patient's age?",
+            "guidance": "Tell us roughly how old the patient was",
             "istarget": True,
             "novalidate": False,
             "required": True
@@ -47,11 +47,11 @@ dummy_elements = {
             "type": "radio-inline",
             "id": "8rf88f89f8d",
             "label": {
-                "question": "What about baked beans?",
+                "question": "Does the patient have a learning disability?",
                 "true": "Yes",
                 "false": "No"
             },
-            "guidance": "We aren't being nosey, we just want to tailor your experience",
+            "guidance": "Example guidance text",
             "target": {
                 "true": "fif8f99di",
                 "false": "jskjf8f7"
@@ -62,8 +62,8 @@ dummy_elements = {
         {
             "type": "textarea",
             "id": "fif8f99di",
-            "label": "Describe your ultimate baked beans meal",
-            "guidance": "Don't be afraid to elaborate on all the juicy details",
+            "label": "Describe the incident",
+            "guidance": "Use this space to describe in your own words what happened. It is important that the information you provide is factual and not simply opinion.  Concentrate on the facts and describe the events in the sequence in which they occurred. Please do not include any patient confidential or person identifiable information, for example names or NHS numbers.",
             "istarget": True,
             "novalidate": False,
             "required": True
@@ -71,8 +71,8 @@ dummy_elements = {
         {
             "type": "text",
             "id": "jskjf8f7",
-            "label": "Please describe in a few words why you don't like baked beans",
-            "guidance": "You are a terrible person",
+            "label": "An example question that is dependent upon one higher up the form",
+            "guidance": "",
             "istarget": True,
             "novalidate": False,
             "required": True
@@ -81,11 +81,11 @@ dummy_elements = {
             "type": "radio-inline",
             "id": "98f8ffdikk",
             "label": {
-                "question": "Do you know the muffin man?",
+                "question": "Was this a Never Event?",
                 "true": "Yes",
                 "false": "No"
             },
-            "guidance": "The one who lives on Drury Lane",
+            "guidance": "Never Events are serious incidents that are entirely preventable because guidance or safety recommendations providing strong systemic protective barriers are available at a national level, and should have been implemented by all healthcare providers.",
             "target": {
                 "true": "uuuui4848"
             },
@@ -96,11 +96,11 @@ dummy_elements = {
             "type": "radio-inline",
             "id": "uuuui4848",
             "label": {
-                "question": "Do you think his muffins are any good?",
+                "question": "Do you know the patient's date of birth?",
                 "true": "Yes",
                 "false": "No"
             },
-            "guidance": "Between you and me, I've got my doubts",
+            "guidance": "",
             "target": {
                 "true": "487478jjjfju"
             },
@@ -111,8 +111,8 @@ dummy_elements = {
         {
             "type": "date",
             "id": "487478jjjfju",
-            "label": "When was the last time you ever had a good muffin from the muffin man?",
-            "guidance": "I've never known the like",
+            "label": "What is the patient's date of birth?",
+            "guidance": "For example 18 7 2008",
             "istarget": True,
             "novalidate": False,
             "required": True
@@ -120,16 +120,16 @@ dummy_elements = {
         {
             "type": "fieldset",
             "id": "9r0ejkjkw88",
-            "label": "An example of a fieldset",
-            "guidance": "Please answer the below questions to the best of your ability",
+            "label": "This is an example fieldset",
+            "guidance": "Fieldsets are groups of questions that can be useful for related items, like address lines.  Normally there will only be one per page.",
             "istarget": False,
             "novalidate": True,
             "elements": [
                 {
                     "type": "text",
                     "id": "98r8jd8rrdy",
-                    "label": "How many tacos do you think you could eat in one sitting?",
-                    "guidance": "",
+                    "label": "Example text question within a fieldset",
+                    "guidance": "It should look like any other text question",
                     "istarget": False,
                     "novalidate": False,
                     "required": True
@@ -137,35 +137,35 @@ dummy_elements = {
                 {
                     "type": "text",
                     "id": "58r8jewwd8de",
-                    "label": "What about in a full day?",
-                    "guidance": "I can probably eat 7 or 8 myself",
+                    "label": "Another example text question",
+                    "guidance": "This question is optional",
                     "istarget": False,
                     "novalidate": False,
-                    "required": True
+                    "required": False
                 },
                 {
                     "type": "checkbox",
                     "id": "98r8jd8rrde",
-                    "label": "What are the best kinds of beans?",
-                    "guidance": "Choose all that apply",
+                    "label": "What is the patient's gender?",
+                    "guidance": "",
                     "istarget": False,
                     "novalidate": False,
                     "options": [
                         {
                             "id": 1,
-                            "label": "Baked beans"
+                            "label": "Female"
                         },
                         {
                             "id": 2,
-                            "label": "Coffee beans"
+                            "label": "Male"
                         },
                         {
                             "id": 3,
-                            "label": "Mexican Jumping beans"
+                            "label": "Non-binary"
                         },
                         {
                             "id": 4,
-                            "label": "Jelly beans"
+                            "label": "Unknown"
                         }
                     ],
                     "required": True
@@ -175,34 +175,34 @@ dummy_elements = {
         {
             "type": "radio-stacked",
             "id": "8r8kkkkf9r",
-            "label": "What is the best type of taco out there?",
-            "guidance": "You've only got one shot at this, don't get it wrong",
+            "label": "Please tick all presentations that apply:",
+            "guidance": "Select all that apply",
             "istarget": False,
             "novalidate": False,
             "options": [
                 {
                     "id": 1,
-                    "label": "Carnitas",
+                    "label": "Additional autism",
                     "target": "fuuf8tt77t"
                 },
                 {
                     "id": 2,
-                    "label": "Carne Asada",
+                    "label": "Behaviour that challenges",
                     "target": "fuuf8tt77t"
                 },
                 {
                     "id": 3,
-                    "label": "Con queso y muchos frijoles",
+                    "label": "Significant physical difficulties",
                     "target": "fuuf8tt77t"
                 },
                 {
                     "id": 4,
-                    "label": "Surprise flavour jamboree",
+                    "label": "Profound and Multiple Learning Disabilities (PMLD)",
                     "target": "jffrf8f7"
                 },
                 {
                     "id": 5,
-                    "label": "Black beans and grilled chicken",
+                    "label": "Dementia",
                     "target": "fuuf8tt77t"
                 }
             ],
@@ -211,8 +211,8 @@ dummy_elements = {
         {
             "type": "text",
             "id": "jffrf8f7",
-            "label": "That's correct.  Write a note of self-praise here",
-            "guidance": "You've got great tase",
+            "label": "Describe any additional or related information:",
+            "guidance": "This is a simple text box",
             "istarget": True,
             "novalidate": False,
             "required": True
@@ -220,8 +220,8 @@ dummy_elements = {
         {
             "type": "textarea",
             "id": "fuuf8tt77t",
-            "label": "That's incorrect.  Please explain yourself.",
-            "guidance": "You are a terrible person",
+            "label": "Describe any additional or related information:",
+            "guidance": "This is an expandable text area",
             "istarget": True,
             "novalidate": False,
             "required": True
@@ -229,8 +229,8 @@ dummy_elements = {
         {
             "type": "date",
             "id": "8d8ikikd665",
-            "label": "In which month and year were you born?",
-            "guidance": "I bet you'll find this pretty tricky",
+            "label": "What was the patient's age?",
+            "guidance": "Tell us roughly how old the patient was",
             "istarget": False,
             "novalidate": False,
             "required": True,
