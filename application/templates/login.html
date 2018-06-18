@@ -1,0 +1,64 @@
+{% extends 'nhsi_template.html' %}
+
+{% block page_title %}Account Selection{% endblock %}
+{% load static %}
+{% load govuk_template_base %}
+
+{% block inner_content %}
+
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <a class="link-back" href="javascript:history.back()">Back</a>
+            <form class="form" method="post">
+                {% csrf_token %}
+
+                <div class="form-group">
+
+                    <h1 class="heading-large">Account Selection</h1>
+
+                    <p>In order to tailor questions to your healthcare provider or setting, log in or create an account to continue.  If you already have an NHS Improvement account you can login with your email and password or you can request a single-use code to be sent to your email address.</p>
+                    <p>You may continue anonymously, but we will not be able to send you feedback and updates on your patient safety incidents.</p>
+
+                    <fieldset>
+                        <legend>
+                            <h2 class="heading-medium">
+                                Choose your login method to continue
+                            </h2>
+
+                        </legend>
+
+                        <div class="multiple-choice">
+                            <input id="email-login" type="radio" name="authentication" value="email-login">
+                            <label for="email-login">I want to login with my email address and password</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="code-login" type="radio" name="authentication" value="code-login">
+                            <label for="code-login">I want to login with a single-use code</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="anonymous" type="radio" name="authentication" value="anonymous">
+                            <label for="anonymous">I want to proceed anonymously</label>
+                        </div>
+                        <div class="multiple-choice">
+                            <p>or</p>
+                        </div>
+                        <div class="multiple-choice">
+                            <input id="register" type="radio" name="authentication" value="register">
+                            <label for="register">I want to register for an account</label>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="form-group">
+                    <input class="button" type="submit" value="Continue">
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}

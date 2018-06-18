@@ -1,0 +1,26 @@
+{% extends 'nhsi_template.html' %}
+
+{% block page_title %}Request Password Reset{% endblock %}
+{% load static %}
+{% load govuk_template_base %}
+
+{% block inner_content %}
+
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <a class="link-back" href="javascript:history.back()">Back</a>
+
+            <legend>
+                <h1 class="heading-large">
+                    Password Reset Link Sent
+                </h1>
+                <p>A password reset link has been sent to the email address you supplied.  Please check your inbox in order to continue.</p>
+                <p class="form-hint">For this prototype, an example of what the email could look like can be found <a href="{% url 'email_password_reset' %}">here</a>.  Please follow this link to see the remainder of the prototype.</p>
+            </legend>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}

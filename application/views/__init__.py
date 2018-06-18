@@ -5,3 +5,4 @@ from .revealing_forms import *
 from .account import *
 from .record import *
 from .forms import *
+from .authenticate import *

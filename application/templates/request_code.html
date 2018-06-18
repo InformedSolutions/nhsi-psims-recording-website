@@ -1,0 +1,47 @@
+{% extends 'nhsi_template.html' %}
+
+{% block page_title %}Request a login code{% endblock %}
+{% load static %}
+{% load govuk_template_base %}
+
+{% block inner_content %}
+
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <a class="link-back" href="javascript:history.back()">Back</a>
+            <form class="form" method="post">
+                {% csrf_token %}
+
+                <div class="form-group">
+
+                    <fieldset>
+                        <legend>
+                            <h1 class="heading-large">
+                                Request a login code
+                            </h1>
+                            <p>Use this form to request a unique single-use login code which will be sent to your email address.  This code will enable you to login without a password.</p>
+                            <p>You must have an existing NHS Improvement account registered to the email address that you supply.</p>
+                        </legend>
+
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label class="form-label-bold" for="username">Email address</label>
+                                <input type="text" class="form-control" id="username" name="username">
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <div class="form-group">
+                    <input class="button" type="submit" value="Send Code">
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}
