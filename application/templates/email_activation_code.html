@@ -1,0 +1,35 @@
+{% extends 'nhsi_template.html' %}
+
+{% block page_title %}Your Activation Code{% endblock %}
+{% load static %}
+{% load govuk_template_base %}
+
+{% block inner_content %}
+
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <a class="link-back" href="javascript:history.back()">Back</a>
+
+            <legend>
+                <h1 class="heading-large">
+                    Your Activation Code
+                </h1>
+                <p>You are receiving this email because you registered for your NHS Improvement account.  If this was not you, please disregard this email.</p>
+                <p>To complete your registration, please copy the code below where prompted into your browser.  Please note that this code expires in 24 hours.</p>
+                <div class="form-group">
+                    <h1 class="heading-medium">
+                        11G7243FR9T0
+                    </h1>
+                </div>
+
+                <p class="form-hint">Please note, this is a prototype example of what the login code email could look like.</p>
+                <p>Kind regards,</p>
+                <p>The NHS Improvement Team</p>
+            </legend>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}

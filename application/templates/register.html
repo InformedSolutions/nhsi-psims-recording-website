@@ -1,6 +1,6 @@
 {% extends 'nhsi_template.html' %}
 
-{% block page_title %}Sign In{% endblock %}
+{% block page_title %}Register{% endblock %}
 {% load static %}
 {% load govuk_template_base %}
 
@@ -18,21 +18,26 @@
                     <fieldset>
                         <legend>
                             <h1 class="heading-large">
-                                Sign in
+                                Register for an NHS Improvement account
                             </h1>
-                            <p class="form-hint">
-                                Sign in to your NHS Improvement account to get started.
-                            </p>
+                            <p>Once you have created your account you will be able to access any incidents you record while signed in.</p>
+                            <p>You can choose whether you want to sign in by username and password or unique code sent to your inbox.</p>
+                            <p>Please fill in the basic details below to get started.</p>
                         </legend>
 
                         <div class="form-group">
                             <div class="form-group">
                                 <label class="form-label-bold" for="username">Email address</label>
+                                <p class="form-hint">This will be your username.</p>
                                 <input type="text" class="form-control" id="username" name="username">
                             </div>
                             <div class="form-group">
-                                <label class="form-label-bold" for="password">Password</label>
-                                <input type="password" class="form-control" id="password" name="password">
+                                <label class="form-label-bold" for="first-name">First Name</label>
+                                <input type="text" class="form-control" id="first-name" name="first-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label-bold" for="surname">Surname</label>
+                                <input type="text" class="form-control" id="surname" name="surname">
                             </div>
                         </div>
 
@@ -40,10 +45,7 @@
                 </div>
 
                 <div class="form-group">
-                    <input class="button" type="submit" value="Continue">
-                </div>
-                <div class="form-group">
-                    <p><a href="{% url 'request_password_reset' %}">Forgotten your password?</a></p>
+                    <input class="button" type="submit" value="Register">
                 </div>
 
             </form>

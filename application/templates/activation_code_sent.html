@@ -1,0 +1,52 @@
+{% extends 'nhsi_template.html' %}
+
+{% block page_title %}Activation Code Sent{% endblock %}
+{% load static %}
+{% load govuk_template_base %}
+
+{% block inner_content %}
+
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <a class="link-back" href="javascript:history.back()">Back</a>
+
+            <form class="form" method="post">
+                {% csrf_token %}
+
+                <div class="form-group">
+
+                    <fieldset>
+
+                        <legend>
+                            <h1 class="heading-large">
+                                Check your inbox
+                            </h1>
+                            <p>Thank you for registering for an NHS Improvement account.  An activation code has been sent to the email address you supplied.  Please check your inbox in order to continue.</p>
+                            <p class="form-hint">For this prototype, an example of what the email could look like can be found <a href="{% url 'email_activation_code' %}">here</a>.  Please follow this link to get the activation code to use below.</p>
+                        </legend>
+
+                        <div class="form-group">
+                            <div class="form-group">
+                                {% if haserror %}
+                                    <span class="error-message">{{ error_message }}</span>
+                                {% endif %}
+                                <label class="form-label-bold" for="code">Enter your activation code here</label>
+                                <input type="text" class="form-control{% if haserror %}-error{% endif %}" id="code" name="code">
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <div class="form-group">
+                    <input class="button" type="submit" value="Activate Account">
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}

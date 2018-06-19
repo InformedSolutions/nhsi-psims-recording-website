@@ -55,7 +55,7 @@ def render_form(request, elements, form_heading, next_form_id):
                 # Get the next form
                 return HttpResponseRedirect('/form?next_form_id=' + next_form_id)
             else:
-                return render(request, 'success.html')
+                return HttpResponseRedirect('/success')
 
 
 '''
@@ -138,3 +138,7 @@ def collect_response(request, element):
         # For all other input types simply get the response by question id
         response = request.POST.get(element['id'])
         element['response'] = response
+
+
+def success(request):
+    return render(request, 'success.html')

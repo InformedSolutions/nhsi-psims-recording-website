@@ -10,6 +10,7 @@ urlpatterns = [
     path('fieldset_form', fieldset_form, name='fieldset_form'),
     path('revealing_form', revealing_form, name='revealing_form'),
     path('account', account, name='account'),
+    path('success', success, name='success'),
     path('account_guidance', account_guidance, name='account_guidance'),
     path('action', action, name='action'),
     path('record_type', record_type, name='record_type'),
@@ -21,7 +22,12 @@ urlpatterns = [
     path('email_password_reset', email_password_reset, name='email_password_reset'),
     path('request_password_reset', request_password_reset, name='request_password_reset'),
     path('reset_link_sent', reset_link_sent, name='reset_link_sent'),
-    path('reset_password', reset_password, name='reset_password')
+    path('reset_password', reset_password, name='reset_password'),
+    path('login_code_sent', login_code_sent, name='login_code_sent'),
+    path('email_login_code', email_login_code, name='email_login_code'),
+    path('activation_code_sent', activation_code_sent, name='activation_code_sent'),
+    path('email_activation_code', email_activation_code, name='email_activation_code'),
+    path('create_password', create_password, name='create_password')
 ]
 
 # Django toolbar settings for development environments

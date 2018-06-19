@@ -27,17 +27,60 @@ def sign_in(request):
     if request.method == 'GET':
         return render(request, 'sign_in.html')
     else:
-        return render(request, 'success.html')
+        return HttpResponseRedirect('/success')
 
 
 def request_code(request):
     if request.method == 'GET':
         return render(request, 'request_code.html')
+    else:
+        return HttpResponseRedirect('/login_code_sent')
+
+
+def login_code_sent(request):
+    if request.method == 'GET':
+        return render(request, 'login_code_sent.html')
+    else:
+        code = request.POST.get('code')
+        if code == '676897':
+            return HttpResponseRedirect('/success')
+        else:
+            request.method = 'GET'
+            return render(request, 'login_code_sent.html', {'haserror': True, 'error_message': 'Invalid code'})
+
+
+def email_login_code(request):
+    return render(request, 'email_login_code.html')
 
 
 def register(request):
     if request.method == 'GET':
-        return render(request, 'login.html')
+        return render(request, 'register.html')
+    else:
+        return HttpResponseRedirect('/activation_code_sent')
+
+
+def activation_code_sent(request):
+    if request.method == 'GET':
+        return render(request, 'activation_code_sent.html')
+    else:
+        code = request.POST.get('code')
+        if code == '11G7243FR9T0':
+            return HttpResponseRedirect('/create_password')
+        else:
+            request.method = 'GET'
+            return render(request, 'activation_code_sent.html', {'haserror': True, 'error_message': 'Invalid code'})
+
+
+def email_activation_code(request):
+    return render(request, 'email_activation_code.html')
+
+
+def create_password(request):
+    if request.method == 'GET':
+        return render(request, 'create_password.html')
+    else:
+        return HttpResponseRedirect('/login')
 
 
 def request_password_reset(request):
@@ -63,4 +106,4 @@ def reset_password(request):
     if request.method == 'GET':
         return render(request, 'reset_password.html')
     else:
-        return render(request, 'success.html')
+        return HttpResponseRedirect('/success')
